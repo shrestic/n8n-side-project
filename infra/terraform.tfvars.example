@@ -1,0 +1,23 @@
+aws_region              = "us-east-1"
+project_name            = "loan-eligibility-engine"
+environment             = "dev"
+s3_bucket_name          = "replace-with-a-globally-unique-bucket-name"
+presign_zip_path        = "./build/presign.zip"
+csv_processor_zip_path  = "./build/csv_processor.zip"
+presign_handler         = "lambdas.presign_url_generator.handler.handler"
+csv_processor_handler   = "lambdas.csv_ingest.handler.handler"
+lambda_runtime          = "python3.11"
+presign_timeout         = 10
+csv_processor_timeout   = 120
+lambda_memory_size      = 512
+n8n_webhook_base_url    = "https://your-n8n.example.com"
+n8n_webhook_key         = "replace-me"
+rds_host                = "your-db.host.amazonaws.com"
+rds_port                = "5432"
+rds_db                  = "loan_engine"
+rds_user                = "app_user"
+rds_password            = "replace-me"
+
+tags = {
+  Owner = "phong"
+}
